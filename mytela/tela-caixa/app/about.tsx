@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Pressable, StyleSheet } from 'react-native';
 import { useRouter } from "expo-router";
-import { FontAwesome5 } from '@expo/vector-icons'; // Importando os ícones
+import { FontAwesome5 } from '@expo/vector-icons'; 
 
 export default function LoginScreen() {
   const [username, setUsername] = useState('');
@@ -12,7 +12,6 @@ export default function LoginScreen() {
   return (
     <View style={styles.container}>
       
-      {/* Campo de Usuário com ícone */}
       <View style={styles.inputContainer}>
         <FontAwesome5 name="user" size={20} color="#005AA7" style={styles.icon} />
         <TextInput
@@ -24,7 +23,7 @@ export default function LoginScreen() {
         />
       </View>
 
-      {/* Campo de Senha com ícone e mostrar/ocultar senha */}
+      
       <View style={styles.inputContainer}>
         <FontAwesome5 name="lock" size={20} color="#005AA7" style={styles.icon} />
         <TextInput
@@ -40,7 +39,7 @@ export default function LoginScreen() {
         </Pressable>
       </View>
 
-      {/* Opções de Pessoa Física ou Jurídica */}
+     
       <View style={styles.radioContainer}>
         <Pressable style={styles.radioButton}>
           <Text style={styles.radioText}>Pessoa Física</Text>
@@ -50,12 +49,12 @@ export default function LoginScreen() {
         </Pressable>
       </View>
 
-      {/* Link para recuperar usuário ou senha */}
+      
       <Pressable onPress={() => alert('Recuperar usuário ou senha')}>
         <Text style={styles.linkText}>Não sei meu usuário ou senha</Text>
       </Pressable>
 
-      {/* Botões de Ação */}
+      
       <Pressable style={styles.accessButton} onPress={() => router.push('/paginaDesejada')}>
         <Text style={styles.accessButtonText}>Acessar sua conta</Text>
       </Pressable>
@@ -116,24 +115,23 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   accessButton: {
-    backgroundColor: '#FFA500', // Laranja
-    borderRadius: 8,
+    backgroundColor: '#F85900', 
     paddingVertical: 15,
     alignItems: 'center',
     marginBottom: 10,
   },
   accessButtonText: {
-    color: '#FFFFFF', // Texto branco
+    color: '#FFFFFF', 
     fontWeight: 'bold',
   },
   backButton: {
-    backgroundColor: '#FFA500', // Laranja
+    backgroundColor: '#F85900', 
     borderRadius: 8,
     paddingVertical: 15,
     alignItems: 'center',
   },
   backButtonText: {
-    color: '#FFFFFF', // Texto branco
+    color: '#FFFFFF', 
     fontWeight: 'bold',
   },
 });

@@ -5,10 +5,10 @@
     "slug": "tela-caixa",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/logoc.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/logoc.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -17,12 +17,18 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/logoc.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.diego0825.telacaixa"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/logoc.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "9b2b2dc6-5cda-42f2-b104-33f6fb2608a2"
+      }
     }
   }
 }

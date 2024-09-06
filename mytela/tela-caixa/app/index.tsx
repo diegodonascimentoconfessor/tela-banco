@@ -1,25 +1,33 @@
 import React from 'react';
-import { View, Text, Pressable, StyleSheet } from 'react-native';
-import { useRouter } from "expo-router"; // Importando o hook para navegação
+import { View, Text, Pressable, StyleSheet, Image } from 'react-native';
+import { useRouter } from "expo-router";
 
 export default function HomeScreen() {
   const router = useRouter();
 
   return (
     <View style={styles.container}>
-      {/* Texto superior */}
+      <Image 
+        source={require('../assets/logoc.png')}
+        resizeMode='cover'
+        style={styles.Image}
+      />
+
       <View style={styles.header}>
         <Text style={styles.headerText}>É POR VOCÊ.</Text>
         <Text style={styles.headerText}>É POR TODO O BRASIL.</Text>
       </View>
 
-      {/* Logo Caixa */}
+      <Image 
+        source={require('../assets/modelo.png')}
+        resizeMode='contain'
+        style={styles.modelo}
+      />
+
       <Text style={styles.logo}>CAIXA</Text>
 
-      {/* Texto de boas-vindas */}
       <Text style={styles.welcomeText}>Que bom ter você aqui!</Text>
 
-      {/* Botão de Acessar conta */}
       <Pressable 
         style={styles.accessButton} 
         onPress={() => router.push('/about')} 
@@ -27,7 +35,6 @@ export default function HomeScreen() {
         <Text style={styles.accessButtonText}>Acessar sua conta</Text>
       </Pressable>
 
-      {/* Link para Cadastrar Usuário */}
       <Pressable 
         style={styles.registerButton} 
         onPress={() => router.push('/cadastrar-usuario')} 
@@ -41,10 +48,15 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#005AA7',
+    backgroundColor: '#005999',
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
+  },
+  Image: {
+    width: 50, 
+    height: 50, 
+    alignSelf: 'flex-start',
   },
   header: {
     alignItems: 'center',
@@ -56,13 +68,21 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
   },
+  modelo: {
+    width: 500, 
+    height: 230, 
+    justifyContent: 'center',  
+    alignSelf: 'center',  
+    marginBottom: 20,
+    marginRight: 150,
+  },
   logo: {
     color: '#FFFFFF',
     fontSize: 48,
     fontWeight: 'bold',
     textAlign: 'center',
     marginVertical: 30,
-    textShadowColor: '#FFA500', 
+    textShadowColor: '#F85900', 
     textShadowOffset: { width: 3, height: 3}, 
     textShadowRadius: 3, 
   },
@@ -72,7 +92,7 @@ const styles = StyleSheet.create({
     marginBottom: 40,
   },
   accessButton: {
-    backgroundColor: '#FFA500',
+    backgroundColor: '#F85900',
     borderRadius: 8,
     paddingVertical: 15,
     paddingHorizontal: 40,
