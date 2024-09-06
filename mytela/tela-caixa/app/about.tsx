@@ -116,25 +116,24 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   accessButton: {
-    backgroundColor: '#FFA500',
+    backgroundColor: '#FFA500', // Laranja
     borderRadius: 8,
     paddingVertical: 15,
     alignItems: 'center',
     marginBottom: 10,
   },
   accessButtonText: {
-    color: '#FFFFFF',
+    color: '#FFFFFF', // Texto branco
     fontWeight: 'bold',
   },
   backButton: {
-    borderWidth: 1,
-    borderColor: '#FF0000',
+    backgroundColor: '#FFA500', // Laranja
     borderRadius: 8,
     paddingVertical: 15,
     alignItems: 'center',
   },
   backButtonText: {
-    color: '#FF0000',
+    color: '#FFFFFF', // Texto branco
     fontWeight: 'bold',
   },
 });

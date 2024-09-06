@@ -22,7 +22,7 @@ export default function HomeScreen() {
       {/* Botão de Acessar conta */}
       <Pressable 
         style={styles.accessButton} 
-        onPress={() => router.push('/about')} // Navegação para a página 'about'
+        onPress={() => router.push('/about')} 
       >
         <Text style={styles.accessButtonText}>Acessar sua conta</Text>
       </Pressable>
@@ -30,7 +30,7 @@ export default function HomeScreen() {
       {/* Link para Cadastrar Usuário */}
       <Pressable 
         style={styles.registerButton} 
-        onPress={() => router.push('/cadastrar-usuario')} // Navegação para a página 'cadastrar-usuario'
+        onPress={() => router.push('/cadastrar-usuario')} 
       >
         <Text style={styles.registerText}>Cadastrar usuário {'>'}</Text>
       </Pressable>
@@ -57,14 +57,14 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   logo: {
-    color: '#FFFFFF', // Laranja para o texto,
+    color: '#FFFFFF',
     fontSize: 48,
     fontWeight: 'bold',
     textAlign: 'center',
     marginVertical: 30,
-    textShadowColor: '#FFA500', // Cor do contorno
-    textShadowOffset: { width: 3, height: 3}, // Tamanho do contorno
-    textShadowRadius: 3, // Difusão do contorno
+    textShadowColor: '#FFA500', 
+    textShadowOffset: { width: 3, height: 3}, 
+    textShadowRadius: 3, 
   },
   welcomeText: {
     color: '#FFFFFF',
