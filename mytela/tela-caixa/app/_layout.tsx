@@ -1,4 +1,4 @@
-// app/_layout.js
+
 import { Stack } from "expo-router";
 
 export default function RootLayout() {
@@ -7,9 +7,9 @@ export default function RootLayout() {
       screenOptions={{
         headerTitleAlign: 'center',
         headerStyle: {
-          backgroundColor: '#005AA7', // Azul Caixa Econômica
+          backgroundColor: '#005AA7', 
         },
-        headerTintColor: '#FFFFFF', // Branco para os textos
+        headerTintColor: '#FFFFFF', 
       }}
     >
       <Stack.Screen name="index" options={{ title: 'Seja Bem-vindo', headerShown: false }} />
